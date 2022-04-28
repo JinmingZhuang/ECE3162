@@ -25,6 +25,9 @@ cd ./val
 ### Workflow :
 1. Create Project and input the pre-trained CNN model provided by Pytorch (https://pytorch.org/vision/stable/models.html), for exampmle, resnet152. By runing the following script, a directory with the same name of input "densenet201" has been created. Under this directory, 5 projects with different inference batch number have also been created.
 ```sh
+chmod +x pro_set.sh
+chmod +x gpu_utilization.sh
+chmod +x run_mem.sh
 ./pro_set.sh
 ```
 
