@@ -178,7 +178,7 @@ def validate(val_loader, model, criterion, args):
 
     # switch to evaluate mode
     model.eval()
-    pic_num=1000
+    pic_num=3000
     test_iter=pic_num/args.batch_size
     with torch.no_grad():
         end = time.time()
