@@ -48,4 +48,8 @@ cd densenet201/
 ### Expected Result
 Here I demonstrate the result of doing one batch inference of densenet201 after 1 epoach in the following picture.<br>
 
-The result of GPU utilization is
+The result of GPU utilization is <br>
+![image](https://user-images.githubusercontent.com/77606152/165711041-3a5c9ff3-0bd9-4a46-8d42-578abd3f152c.png)<br>
+
+The result of Memory utilization is <br>
+![GPU_low_batch_inference](https://user-images.githubusercontent.com/77606152/165711364-391dc69a-db8c-4b46-8caa-c0bb07f2ff3f.png)<br>
