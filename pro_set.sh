@@ -178,11 +178,12 @@ def validate(val_loader, model, criterion, args):
 
     # switch to evaluate mode
     model.eval()
-
+    pic_num=1000
+    test_iter=pic_num/args.batch_size
     with torch.no_grad():
         end = time.time()
         for i, (images, target) in enumerate(val_loader):
-            if i > 180:
+            if i > test_iter:
                 break
             if args.gpu is not None:
                 images = images.cuda(args.gpu, non_blocking=True)
