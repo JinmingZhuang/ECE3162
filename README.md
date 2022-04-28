@@ -19,6 +19,7 @@ ImageNet Dataset: https://image-net.org/download <br>
 2.Prepare the validation dataset.<br>
 ```sh
 cd ./val
+chmod +x valprep.sh
 ./valprep.sh
 ```
 
