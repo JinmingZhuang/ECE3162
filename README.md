@@ -14,4 +14,35 @@ In this project, I test the low batch inference GPU and memory utilization of pr
 ```
 ### Datasets :
 ImageNet Dataset: https://image-net.org/download <br>
-Download and unzip it in ./val
+
+1.Download validation dataset and unzip it in ./val.<br>
+2.Prepare the validation dataset.<br>
+```sh
+cd ./val
+./valprep.sh
+```
+
+### Workflow :
+1. Create Project and input the pre-trained CNN model provided by Pytorch (https://pytorch.org/vision/stable/models.html), for exampmle, resnet152. By runing the following script, a directory with the same name of input "densenet201" has been created. Under this directory, 5 projects with different inference batch number have also been created.
+```sh
+./pro_set.sh
+```
+
+2. Run CNN inference and Profile GPU and Memory Utilization.<br>
+Here, we use batch=5 as an example to illustrate the process.<br>
+```sh
+cd resnet152/resnet152_5_batch
+dlprof --mode=simple --reports=kernel,iteration,summary python imagenet_test.py
+./run_mem.sh
+```
+
+3. GPU utilization collect<br>
+```sh
+cd densenet201/
+./gpu_utilization.sh
+```
+
+### Expected Result
+Here I demonstrate the result of doing one batch inference of densenet201 after 1 epoach in the following picture.<br>
+
+The result of GPU utilization is
