@@ -47,7 +47,9 @@ cd densenet201/
 ```
 
 ### Expected Result
-Here I demonstrate the result of doing one batch inference of densenet201 after 1 epoach in the following picture.<br>
+Here I demonstrate the result of resnet152 inference on KT1200 GPU after 1 epoach in the following picture.<br>
+The Accuracy for 1 batch inference in total 3000 batches is<br>
+![image](https://user-images.githubusercontent.com/77606152/165745807-12f3fa06-443a-448e-80f9-78fb9a2dd859.png)
 
 The result of GPU utilization is <br>
 ![image](https://user-images.githubusercontent.com/77606152/165711041-3a5c9ff3-0bd9-4a46-8d42-578abd3f152c.png)<br>
